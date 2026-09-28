@@ -1,0 +1,196 @@
+
+
+
+
+
+
+1º TDE – COMPUTAÇÃO GRÁFICA
+
+*QUESTÃO 1 – Conceitos de Computação 
+
+Resposta: E) I, II, III e IV.
+
+Explicação:
+
+As quatro afirmações apresentadas estão relacionadas à Computação Gráfica.
+
+A afirmação I relaciona a Computação Gráfica à reprodução de imagens por meios computacionais.
+
+A afirmação II apresenta a Computação Gráfica como uma área da Ciência da Computação responsável pelo estudo e desenvolvimento de técnicas e algoritmos para geração ou síntese de imagens por computador.
+
+A afirmação III afirma que a Computação Gráfica está presente em diversas áreas do conhecimento, incluindo aplicações em automóveis e jogos.
+
+A afirmação IV apresenta o OpenGL como uma biblioteca/interface utilizada para trabalhar com recursos de hardware gráfico e para a criação e modelagem de imagens em 2D e 3D.
+
+Portanto, as quatro afirmações são consideradas verdadeiras.
+
+*QUESTÃO 2 – Áreas da Computação Gráfica
+
+Resposta: C) III e IV.
+
+Explicação:
+
+A afirmação III relaciona a modelagem à descrição de um modelo, objeto ou cena para que possa ser desenhado.
+
+A afirmação IV relaciona a análise de imagens à obtenção de informações sobre os componentes de uma imagem a partir de sua representação visual.
+
+Portanto, de acordo com as alternativas apresentadas no enunciado, a resposta é a alternativa C.
+
+QUESTÃO 3 – Bitmap e Vetorial
+
+Resposta: C.
+
+Explicação:
+
+As imagens vetoriais são representadas por elementos matemáticos, como linhas, curvas e formas geométricas. Por isso, podem ser ampliadas ou reduzidas sem perda significativa de qualidade.
+
+As imagens bitmap são formadas por pixels. Quando uma imagem bitmap é ampliada excessivamente, os pixels podem ficar visíveis e a imagem pode perder qualidade.
+
+Portanto, a alternativa C está correta.
+
+QUESTÃO 4 – Transformações Geométricas
+
+Resposta: E) I, II, III e IV.
+
+Explicação:
+
+As quatro afirmações estão relacionadas às transformações geométricas utilizadas em Computação Gráfica.
+
+A translação altera a posição de um objeto utilizando valores como Tx, Ty e Tz.
+
+A rotação modifica a orientação de um objeto em torno de um determinado eixo utilizando um ângulo.
+
+A escala altera o tamanho do objeto utilizando fatores como Sx, Sy e Sz.
+
+Portanto, as afirmações I, II, III e IV estão corretas.
+
+*QUESTÃO 5 – Conversão de imagem colorida para escala de cinza
+
+Objetivo:
+
+Desenvolver um programa que carregue uma imagem colorida e gere uma segunda imagem em escala de cinza, apresentando as duas imagens simultaneamente.
+
+Desenvolvimento:
+
+1. A biblioteca OpenCV foi importada.
+2. A imagem foi carregada utilizando a função cv2.imread().
+3. A imagem colorida foi convertida para escala de cinza utilizando cv2.cvtColor().
+4. A imagem original e a imagem em escala de cinza foram exibidas utilizando cv2.imshow().
+5. O programa aguarda uma tecla utilizando cv2.waitKey().
+6. As janelas são fechadas utilizando cv2.destroyAllWindows().
+
+Arquivo utilizado: questao5.py
+
+*QUESTÃO 6 – Redimensionamento da imagem
+
+Objetivo:
+
+Carregar uma imagem e gerar versões correspondentes a 50%, 25% e a um tamanho definido pelo usuário.
+
+Desenvolvimento:
+
+1. A imagem original foi carregada utilizando OpenCV.
+2. Foram obtidas a largura e a altura da imagem original.
+3. Foi criada uma nova imagem com 50% das dimensões originais.
+4. Foi criada uma nova imagem com 25% das dimensões originais.
+5. O programa solicita ao usuário uma nova largura e uma nova altura.
+6. Uma terceira versão da imagem é criada utilizando as dimensões informadas pelo usuário.
+7. As imagens são apresentadas simultaneamente.
+
+A função cv2.resize() foi utilizada para realizar o redimensionamento.
+
+Arquivo utilizado: questao6.py
+
+*QUESTÃO 7 – Análise de suavização
+
+Objetivo:
+
+Analisar o efeito da suavização de uma imagem utilizando a função blur() com diferentes tamanhos de kernel.
+
+Desenvolvimento:
+
+1. A imagem foi carregada utilizando OpenCV.
+2. Foi aplicado um filtro blur com kernel 3x3.
+3. Foi aplicado um filtro blur com kernel 5x5.
+4. Foi aplicado um filtro blur com kernel 9x9.
+5. A imagem original e os três resultados foram apresentados para comparação.
+
+Conclusão:
+
+O tamanho do kernel influencia diretamente na intensidade da suavização. O kernel 3x3 produz uma suavização menor, enquanto o 5x5 apresenta uma suavização intermediária. O kernel 9x9 produz uma suavização maior, reduzindo mais detalhes e deixando as bordas menos definidas.
+
+Arquivo utilizado: questao7.py
+
+*QUESTÃO 8 – Separação de objetos e fundo utilizando threshold
+
+Objetivo:
+
+Utilizar diferentes valores de threshold para gerar imagens binárias e analisar a separação entre objetos e fundo.
+
+Desenvolvimento:
+
+1. A imagem foi carregada.
+2. A imagem foi convertida para escala de cinza.
+3. Foram aplicados diferentes valores de threshold.
+4. Foram testados os valores 80, 120 e 180.
+5. Também foi utilizado o método THRESH_BINARY_INV para inverter o resultado.
+6. Os resultados foram apresentados para comparação.
+
+Conclusão:
+
+A escolha do valor de threshold influencia diretamente na separação entre o objeto e o fundo. O melhor valor deve ser escolhido observando os resultados obtidos na imagem utilizada, procurando aquele que apresenta a melhor separação entre os objetos e o fundo.
+
+Arquivo utilizado: questao8.py
+
+*QUESTÃO 9 – Detecção e contagem de objetos
+
+Objetivo:
+
+Carregar uma imagem contendo vários objetos, detectar seus contornos e contabilizar a quantidade de objetos encontrados.
+
+Desenvolvimento:
+
+1. A imagem objetos.jpg foi carregada.
+2. A imagem foi convertida para escala de cinza.
+3. Foi aplicada uma suavização utilizando Blur .
+4. Foi utilizado threshold para gerar uma imagem binária.
+5. Os contornos foram encontrados utilizando cv2.findContours().
+6. A quantidade de contornos encontrados foi contabilizada.
+7. Os contornos foram desenhados sobre a imagem original.
+8. A quantidade de objetos detectados foi apresentada no terminal.
+
+Arquivo utilizado: questao9.py
+
+Imagem utilizada: objetos.jpeg
+
+*QUESTÃO 10 – Cálculo da área dos objetos
+
+Objetivo:
+
+Detectar objetos, calcular suas áreas, eliminar objetos pequenos considerados ruídos e apresentar um resumo dos resultados.
+
+Desenvolvimento:
+
+1. A imagem objetos.jpg foi carregada.
+2. A imagem foi convertida para escala de cinza.
+3. Foi aplicada uma suavização utilizando Blur.
+4. Foi aplicado threshold para gerar uma imagem binária.
+5. Os contornos foram identificados utilizando cv2.findContours().
+6. A área de cada contorno foi calculada utilizando cv2.contourArea().
+7. Foi definido um tamanho mínimo de área para eliminar objetos pequenos.
+8. Os objetos que atingiram o tamanho mínimo foram considerados válidos.
+9. Os objetos válidos foram destacados na imagem.
+10. Foram calculadas a maior área, a menor área e a área total dos objetos válidos.
+11. O programa apresentou um resumo dos resultados no terminal.
+
+Resumo apresentado pelo programa:
+
+Objetos detectados: 8
+Objetos válidos: 7
+Maior área: 196472.5
+Menor área: 8893.5
+Área total: 513949.0
+
+Arquivo utilizado: questao10.py
+
+Imagem utilizada: objetos.jpeg
